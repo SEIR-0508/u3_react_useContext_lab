@@ -1,5 +1,6 @@
 import { UserContext } from "../App";
 import { useContext, useState } from "react";
+import moment from "moment";
 
 const Login = () => {
   const { user, setUser } = useContext(UserContext);
@@ -7,7 +8,11 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUser({ ...user, username: input, lastLogIn: Date.now() });
+    setUser({
+      ...user,
+      username: input,
+      lastLogIn: moment().format("MMMM Do YYYY, h:mm:ss a"),
+    });
     setInput("");
   };
 
