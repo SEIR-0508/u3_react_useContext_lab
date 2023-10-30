@@ -14,14 +14,14 @@ Create an app that displays and updates data via a Context provider and consumer
 
 ## Instructions
 
-1. Create a new app with `npx create-react-app react-context-lab`.
+1. Create a new app with
 1. Switch into the new project directory with `cd react-context-lab`.
 1. Open the project in VS Code with `code .`.
 1. Complete the requirements listed below.
 
 ### Requirements
 
-1. Create a file in your `src` directory called UserContext.js and use `export const UserContext = React.createContext(null);` to create a provider and consumer for your app.
+1. Create a file in your `src` directory called UserContext.js and use `export const UserContext = React.createContext();` to create a provider and consumer for your app.
 1. Your App component should render a Header component and a Home component. Create some state there for your user object. Give it an initial state of: `{ username: '', lastLogIn: '' }`
 1. Add a `UserContext.Provider` component to App that will wrap all of the components that App renders.
 1. The Header component should render a Login component.
